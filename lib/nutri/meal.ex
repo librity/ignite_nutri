@@ -19,7 +19,8 @@ defmodule Nutri.Meal do
     meal
     |> cast(params, @required_keys)
     |> validate_required(@required_keys)
-    |> validate_length(:description, greater_than_or_equal_to: 10)
+    |> validate_length(:description, greater_than_or_equal_to: 5)
     |> validate_number(:calories, greater_than: 0)
+    |> validate_number(:calories, less_than: 2000)
   end
 end

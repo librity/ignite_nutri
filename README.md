@@ -95,8 +95,15 @@ $ mix test --cover
 
 ## Elixir Commands <a name = "elixir_commands"></a>
 
-```elixir
+Create a meal:
 
+```elixir
+meal_params = %{
+  description: "Royal with cheese",
+  date: "1994-05-21 12:00:00",
+  calories: 500
+}
+Nutri.Meals.Create.call(meal_params)
 ```
 
 ## Libs <a name = "libs"></a>
