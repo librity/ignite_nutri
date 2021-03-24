@@ -124,10 +124,22 @@ Fetch meals:
 > Nutri.get_meal_by_id(1)
 ```
 
+Update meal:
+
+```elixir
+> new_meal_params = %{
+  "id" => 1,
+  "description" => "UPDATEDDDDDDD",
+  "date" => "2021-03-24 12:00:00",
+  "calories" => 1000
+}
+> Nutri.Meals.Update.call(new_meal_params)
+```
+
 Delete meal:
 
 ```elixir
-Nutri.delete_meal(1)
+> Nutri.delete_meal(1)
 ```
 
 ## Libs <a name = "libs"></a>
