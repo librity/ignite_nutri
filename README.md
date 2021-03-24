@@ -113,6 +113,7 @@ Nutri.Meals.Create.call(meal_params)
 ## Docs <a name = "docs"></a>
 
 - https://elixir-lang.org/crash-course.html
+- https://hexdocs.pm/ecto/Ecto.Changeset.html#validate_number/3
 
 ## Resources <a name = "resources"></a>
 
