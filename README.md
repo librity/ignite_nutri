@@ -21,6 +21,14 @@ Built-in:
 
 - `GET` http://localhost:4000/dashboard
 
+`Meals`
+
+- `GET` http://localhost:4000/api/meals
+- `GET` http://localhost:4000/api/meals/:id
+- `POST` http://localhost:4000/api/meals
+- `PUT` http://localhost:4000/api/meals/:id
+- `DELETE` http://localhost:4000/api/meals/:id
+
 ## Setup <a name = "setup"></a>
 
 Install `Erlang`, `Elixir` and `Phoenix`.
@@ -114,6 +122,12 @@ Fetch meals:
 
 > Nutri.get_meals()
 > Nutri.get_meal_by_id(1)
+```
+
+Delete meal:
+
+```elixir
+Nutri.delete_meal(1)
 ```
 
 ## Libs <a name = "libs"></a>

@@ -29,4 +29,12 @@ defmodule NutriWeb.MealsController do
       |> render("create.json", meal: meal)
     end
   end
+
+  def delete(conn, %{"id" => id}) do
+    with {:ok, %Meal{} = meal} <- Nutri.delete_meal(id) do
+      conn
+      |> put_status(:ok)
+      |> render("create.json", meal: meal)
+    end
+  end
 end
