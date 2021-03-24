@@ -8,7 +8,7 @@ defmodule NutriWeb.Router do
   scope "/api", NutriWeb do
     pipe_through :api
 
-    resources "/meals", MealsController, only: [:create]
+    resources "/meals", MealsController, only: [:index, :show, :create]
   end
 
   # Enables LiveDashboard only for development

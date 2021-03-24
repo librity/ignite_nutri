@@ -6,4 +6,5 @@ defmodule Nutri.Error do
   defstruct @keys
 
   def build(status, result), do: %__MODULE__{status: status, result: result}
+  def build_meal_not_found, do: build(:not_found, "Meal not found")
 end

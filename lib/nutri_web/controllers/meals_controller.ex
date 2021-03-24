@@ -6,6 +6,22 @@ defmodule NutriWeb.MealsController do
 
   action_fallback FallbackController
 
+  def index(conn, _params) do
+    meals = Nutri.get_meals()
+
+    conn
+    |> put_status(:ok)
+    |> render("meals.json", meals: meals)
+  end
+
+  def show(conn, %{"id" => id}) do
+    with {:ok, %Meal{} = meal} <- Nutri.get_meal_by_id(id) do
+      conn
+      |> put_status(:ok)
+      |> render("meal.json", meal: meal)
+    end
+  end
+
   def create(conn, params) do
     with {:ok, %Meal{} = meal} <- Nutri.create_meal(params) do
       conn

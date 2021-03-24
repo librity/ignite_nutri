@@ -98,12 +98,22 @@ $ mix test --cover
 Create a meal:
 
 ```elixir
-meal_params = %{
+> meal_params = %{
   description: "Royal with cheese",
   date: "1994-05-21 12:00:00",
   calories: 500
 }
-Nutri.Meals.Create.call(meal_params)
+> Nutri.Meals.Create.call(meal_params)
+```
+
+Fetch meals:
+
+```elixir
+> Nutri.Repo.all(Nutri.Meal)
+> Nutri.Repo.get(Nutri.Meal, 1)
+
+> Nutri.get_meals()
+> Nutri.get_meal_by_id(1)
 ```
 
 ## Libs <a name = "libs"></a>
